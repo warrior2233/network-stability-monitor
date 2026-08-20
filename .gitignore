@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.venv/
+venv/
+
+# Test output and private network information
+*.csv
+*.log
+network_*.json
+ui_settings.json
+NetworkStabilityTest/
+
+# Local development artifacts
+ui_*.png
+net_stability_ui_*.png
+codex_reference.png
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Editors and Windows
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
+*.lnk
