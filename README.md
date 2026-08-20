@@ -13,6 +13,12 @@
 - 测速历史、CSV 日志与明暗主题
 - Windows 11 风格的无边框、圆角、高 DPI 界面
 
+## 直接下载
+
+不想安装 Python 时，可以从 [GitHub Releases](https://github.com/warrior2233/network-stability-monitor/releases/latest) 下载单文件版 `NetworkStabilityMonitor.exe`，双击即可运行。
+
+当前 EXE 未使用商业代码签名证书。Windows 首次运行时可能显示 SmartScreen“未知发布者”提示，请只从本仓库的 Releases 页面下载。
+
 ## 环境要求
 
 - Windows 10/11
@@ -37,6 +43,17 @@ python .\net_stability_gui.py
 python .\net_stability_test.py --duration 60 --connections 4
 ```
 
+## 构建 Windows EXE
+
+安装开发依赖后运行构建脚本：
+
+```powershell
+python -m pip install -r requirements-dev.txt
+powershell -ExecutionPolicy Bypass -File .\build_release.ps1
+```
+
+生成文件位于 `dist\NetworkStabilityMonitor.exe`。
+
 ## 测试数据
 
 程序会把界面设置和 CSV 测试记录保存在：
@@ -54,3 +71,7 @@ D:\ProgramData\NetworkStabilityTest
 ## 注意事项
 
 测速会产生较大的网络流量，并可能持续占用上下行带宽。移动网络、按流量计费连接或生产网络中请谨慎设置测试时长和并发数。测试结果也会受到测速源负载、路由、代理节点和运营商策略影响。
+
+## 许可证
+
+本项目使用 [MIT License](LICENSE)。
